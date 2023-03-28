@@ -60,10 +60,12 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
+    color: rgb(225, 239, 230);
 }
 
 h1, h2, h3, h4, h5, h6, p, a, i {
     text-decoration: none;
+    color: rgb(225, 239, 230);
 }
 
 h1 {
@@ -89,12 +91,40 @@ p, a {
 /* header section */
 header {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     background-image: url('../img/menu-header.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 1000px rgba(0,4,17,.8);
 }
+header div {
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+header div nav {
+    width: 90%;
+    background: none;
+}
+header div nav div {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: none;
+}
+header div .socials{
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 2rem;
+}
+    
 
 /* spacer */
 .spacer {
@@ -112,36 +142,119 @@ header {
 
 .menu {
     width: 100%;
-    height: auto;
+    /* height: auto; */
     background-image: url('../img/staff-bartender.jpg');
     background-color: rgb(0, 4, 17);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+.menu h2 {
+    text-align: center;
+}
+
+.menu-container {
+    /* height: 152vh; */
+    display: flex;
+    flex-flow:row wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+.menu-section {
+    width: 35%;
+}
+
+.menu-item {
+    /* height: 15%; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.menu-item .wings {
+    gap: 20%;
+}
+.menu-item .secondary-description {
+    font-style: italic;
+}
+
 
 /* footer section */
 footer {
     width: 100%;
-    height: 15vh;
+    /* height: 18vh; */
     padding-top: 2.5vh;
     font-size: 3rem;
+    color: rgb(225, 239, 230);
+    background-color: rgb(0, 4, 17);
 }
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-container .nav {
+    width: 60%;
+}
+.footer-container nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+footer .mailing h3 {
+    font-size: 2rem;
+}
+footer .copyright {
 
+    margin-top: 6%;
+}
+footer .copyright p{
+    font-size: 2rem;
+
+}
 /* mobile media query */
 @media (max-width: 428px) {
     /* header section */
     .header-title {
-        width: 75%;
+        /* width: 75%; */
         margin: 0 auto;
         text-align: center;
         font-size: 4rem;
+    }
+  
+    header div {
+        height: 40vh;
+        display: flex;
+        
+    }
+    header div nav a {
+        font-size: 2rem;
+    }
+    header div nav div {
+        flex-direction: column;
     }
 
     /* menu */
     .menu {
         background-image: none;
+        height: 400vh;
     }
+    .menu-container {
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    .menu-section h3 {
+        font-size: 2.5rem;
+    }
+    .menu-section .menu-item h4 {
+        font-size: 2 rem;
+    }
+    /* .menu-container .menu-section {
+        background-color: rgb(225, 239, 230);
+        color: rgb(0, 4, 17);
+    } */
 
     /* footer section */
     footer {
@@ -149,4 +262,5 @@ footer {
         padding-top: 2.5vh;
         font-size: 2rem;
     }
+
 }
